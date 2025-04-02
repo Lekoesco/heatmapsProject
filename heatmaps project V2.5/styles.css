@@ -1,0 +1,106 @@
+html, body, #map {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+}
+
+button, select {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#directions-panel, #weather-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 40%;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.2);
+}
+
+.direction-step {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.step-number {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#modal-content {
+    background: linear-gradient(135deg, #ffffff, #e9f4ff);
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 80%;
+    overflow-y: auto;
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    animation: modalShow 0.3s ease-out;
+}
+
+@keyframes modalShow {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode #modal-content {
+    background: linear-gradient(135deg, #222, #111); /* μαύρο gradient */
+    color: #fff;
+}
+
+.dark-mode .controls button, 
+.dark-mode .controls select {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode #directions-panel,
+.dark-mode #weather-panel {
+    background-color: #222;
+}

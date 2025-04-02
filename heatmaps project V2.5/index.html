@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps - Traffic, GPS & Weather</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <div class="controls">
+        <button id="traffic-b">🚦Εναλλαγή Κυκλοφορίας</button>
+        <select id="travel-mode">
+            <option value="DRIVE">🚗 Αυτοκίνητο</option>
+            <option value="WALK">🚶‍♂️ Περπάτημα</option>
+        </select>
+        <button onclick="calculateRoute()">📍Υπολογισμός Διαδρομής</button>
+        <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </div>
+
+    <div id="directions-panel"></div>
+    <div id="weather-panel"></div>
+
+    <script src="scripts.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUJt1EB3nSL3D9FUXk5S0eeSTdSZPrMvY&libraries=geometry,places&callback=initMap">
+    </script>
+
+</body>
+</html>

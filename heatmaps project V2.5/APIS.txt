@@ -1,0 +1,2 @@
+weather api = 5d5f7548e8cdd14df5be5cac4d613e0d
+google api = AIzaSyAUJt1EB3nSL3D9FUXk5S0eeSTdSZPrMv
